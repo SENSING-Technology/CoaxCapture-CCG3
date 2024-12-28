@@ -9,8 +9,17 @@ fi
 # Set card 0 or 1
 set_card 0
 
+# Sync IPC by ptp,enp0s31f6 is "network card name"
+#ptp_timesync enp0s31f6
+
 echo "Reset Process!" 
 mipi_disable
+
+# Camera pps ptp mode config {0: no outside pps input & master; 1:outside pps input & master; 2:no outside pps input & salve; 3:outside pps input & salve }
+#camera_pps_ptpmode 0 
+
+# Camera time stamp  source {0: vsync; 1:fsync; 2:frame transfer done; }
+timestamp_src 1
 
 # Camera input format conversion config {0 or 1}
 camera_input_format_conversion[0]=0
@@ -78,6 +87,7 @@ camera_resolution 6 3840  2160
 camera_resolution 7 3840  2160
 echo "Card Params Init Processed!"
 
+#camera 0-7 value: 0:GMSL camera  1:GMSL2(6G) camera  2:GMSL2F(3G) camera 
 camera_serdes_type[0]=1
 camera_serdes_type[1]=1
 camera_serdes_type[2]=1
