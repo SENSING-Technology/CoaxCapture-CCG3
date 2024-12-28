@@ -2290,8 +2290,8 @@ DATA_ELEMENT  max9296_96717F_Horus640_array[] = {
     {0x90, 0x0001, 0x01, 0x10, 400}, // 3g
     {0x90, 0x0320, 0x28, 0x10, 5},   // mipi 800Mbps
     {0x90, 0x0313, 0x02, 0x10, 100}, // mipi output enable
-    {0x84, 0x0331,0x10, 0x10, 5},    // 2 lane 
-    {0x84, 0x0330,0x40, 0x10, 5},    // Enable virtual channel mapping 
+    {0x84, 0x0331, 0x10, 0x10, 5},    // 2 lane 
+    {0x84, 0x0330, 0x40, 0x10, 5},    // Enable virtual channel mapping 
     {0x84, 0x0057, 0x12, 0x10, 5},   // swap Y & Z
     {0x84, 0x005B, 0x11, 0x10, 5},   // swap Y & Z
     {0x84, 0x0318, 0x5E, 0x10, 5},   // yuv422
@@ -2311,7 +2311,7 @@ ELE_INFO ele_info[] = {
     {max9296_9295_imax390_raw_array, sizeof(max9296_9295_imax390_raw_array) / sizeof(DATA_ELEMENT)},//9
     {max9296_9295_imax490_raw_array, sizeof(max9296_9295_imax490_raw_array) / sizeof(DATA_ELEMENT)},//10
     {max9296_9295_isx031_array, sizeof(max9296_9295_isx031_array) / sizeof(DATA_ELEMENT)},//11 fish eye camera
-    {max9296_96717_2lane_array, sizeof(max9296_96717_2lane_array) / sizeof(DATA_ELEMENT)}//12
+    {max9296_96717_2lane_array, sizeof(max9296_96717_2lane_array) / sizeof(DATA_ELEMENT)},//12
 	{max9296_96717F_Horus640_array, sizeof(max9296_96717F_Horus640_array) / sizeof(DATA_ELEMENT)}//13
 };
 
