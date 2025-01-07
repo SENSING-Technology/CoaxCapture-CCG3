@@ -2295,15 +2295,22 @@ DATA_ELEMENT  max9296_96717F_Horus640_array[] = {
     {0x84, 0x0057, 0x12, 0x10, 5},   // swap Y & Z
     {0x84, 0x005B, 0x11, 0x10, 5},   // swap Y & Z
     {0x84, 0x0318, 0x5E, 0x10, 5},   // yuv422
+    {0x84, 0x02d3, 0x04, 0x10, 5},   // mfp7 config
+    {0x84, 0x02D5, 0x07, 0x10, 5},   // mfp7 config
+    {0x84, 0x02d6, 0x04, 0x10, 5},   // mfp8 config
+    {0x84, 0x02D8, 0x07, 0x10, 5},   // mfp8 config
+    {0x90, 0x0003, 0x40, 0x10, 5},   // GPIO enable
+    {0x90, 0x02c2, 0x83, 0x10, 5},   //
+    {0x90, 0x02c3, 0xA7, 0x10, 5},   //
 };
 
 
 ELE_INFO ele_info[] = {
-	{max9296_96705_array, sizeof(max9296_96705_array) / sizeof(DATA_ELEMENT)},
-	{max9296_9295_array, sizeof(max9296_9295_array) / sizeof(DATA_ELEMENT)},
-	{max9296_96717F_array, sizeof(max9296_96717F_array) / sizeof(DATA_ELEMENT)},
+    {max9296_96705_array, sizeof(max9296_96705_array) / sizeof(DATA_ELEMENT)},
+    {max9296_9295_array, sizeof(max9296_9295_array) / sizeof(DATA_ELEMENT)},
+    {max9296_96717F_array, sizeof(max9296_96717F_array) / sizeof(DATA_ELEMENT)},
     {max9296_9295_anc_array, sizeof(max9296_9295_anc_array) / sizeof(DATA_ELEMENT)},
-	{max9296_96717F_anc_array, sizeof(max9296_96717F_anc_array) / sizeof(DATA_ELEMENT)},   
+    {max9296_96717F_anc_array, sizeof(max9296_96717F_anc_array) / sizeof(DATA_ELEMENT)},   
     {max9296_9295_raw_array, sizeof(max9296_9295_raw_array) / sizeof(DATA_ELEMENT)},//5
     {max_X8B_raw_array, sizeof(max_X8B_raw_array) / sizeof(DATA_ELEMENT)},//6
     {max9296_9295_ar0233_raw_array, sizeof(max9296_9295_ar0233_raw_array) / sizeof(DATA_ELEMENT)},//7
@@ -2312,7 +2319,7 @@ ELE_INFO ele_info[] = {
     {max9296_9295_imax490_raw_array, sizeof(max9296_9295_imax490_raw_array) / sizeof(DATA_ELEMENT)},//10
     {max9296_9295_isx031_array, sizeof(max9296_9295_isx031_array) / sizeof(DATA_ELEMENT)},//11 fish eye camera
     {max9296_96717_2lane_array, sizeof(max9296_96717_2lane_array) / sizeof(DATA_ELEMENT)},//12
-	{max9296_96717F_Horus640_array, sizeof(max9296_96717F_Horus640_array) / sizeof(DATA_ELEMENT)}//13
+    {max9296_96717F_Horus640_array, sizeof(max9296_96717F_Horus640_array) / sizeof(DATA_ELEMENT)}//13
 };
 
 ELE_INFO ele_info_raw[] = {
