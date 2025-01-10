@@ -13,7 +13,6 @@
 #include <sys/mman.h>
 #include <sys/time.h>
 #include "element_process.h"
-#include "serdes_data_raw.c"
 
 DATA_ELEMENT max9296_96705_array[] = {
 	{0x90, 0x0313, 0x40, 0x10, 5},	 // disable MIPI output
