@@ -3,25 +3,37 @@
 
 tool_path=../tools
 std_out=init_card.log
+#std_out=/dev/NULL
 date  > $std_out
+
+
 # set device
 device_array[0]=/dev/xdma0_user 
 device_array[1]=/dev/xdma1_user
+device_array[2]=/dev/xdma2_user
+device_array[3]=/dev/xdma3_user
 dev=${device_array[0]}
 
 function set_card () {
     device_num=$1
     #echo $device_num
-     if [ $device_num -eq 0 ] 
-        then
+    if [ $device_num -eq 0 ] 
+    then
         dev=${device_array[0]}
-        else
+    elif [ $device_num -eq 1 ]
+    then
         dev=${device_array[1]}
-     fi
+    elif [ $device_num -eq 2 ]
+    then
+        dev=${device_array[2]}
+    else
+        dev=${device_array[3]}
+    fi
 }
 
 result="0x00000000"
 function wait_pl_ps_sync () {
+	#result="0x00000000"
 	loop_count=1
 
 	$tool_path/reg_rw $dev 0x40024 wp >output
@@ -154,8 +166,9 @@ function timestamp_src () {
     exit 1
     ;;
     esac
+    #echo $mode_value
     $tool_path/reg_rw $dev 0x3016c w $mode_value >> $std_out
-    sleep 0.5
+    #sleep 0.5
 }
 
 function card_trigger_signal_mode () {
@@ -178,6 +191,7 @@ function card_trigger_signal_mode () {
     exit 1
     ;;
     esac
+    #echo $mode_value
     $tool_path/reg_rw $dev 0x30020 w $mode_value >> $std_out
     sleep 0.5
 } 
@@ -240,6 +254,8 @@ function camera_resolution () {
     vertical=$3
     case $channel in
         "1")
+        #echo "$tool_path/reg_rw $dev 0x30100 w $horizontal"
+        #echo "$tool_path/reg_rw $dev 0x30104 w $vertical"  
         $tool_path/reg_rw $dev 0x30100 w $horizontal
         $tool_path/reg_rw $dev 0x30104 w $vertical
         ;;
@@ -282,34 +298,40 @@ function i2ctransfer () {
     #echo $channel
     if [ $value -eq 0 ] 
         then
+        #echo "i2ctransfer -f -y $channel w3@0x48 0x03 0x13 0x42"
         $tool_path/serdes_cfg $dev 100 "i2ctransfer -f -y $channel w3@0x48 0x03 0x13 0x42" >> $std_out
         else
+        #echo "i2ctransfer -f -y $channel w3@0x48 0x03 0x13 0x2"
         $tool_path/serdes_cfg $dev 100 "i2ctransfer -f -y $channel w3@0x48 0x03 0x13 0x2" >> $std_out
     fi
 }
 
 function camera_serdes_cfg () {
-    # PCIE reset release
-    $tool_path/reg_rw $dev 0x30004 w 0x00 >> $std_out    
-
     $tool_path/serdes_cfg $dev 0 $1  >> $std_out
-    echo $tool_path/serdes_cfg $dev 0 $1  >> $std_out
-    echo "Serde 0 Params Init Processed!"
+    echo "Serdes 0 Params Init Processed!"
     $tool_path/serdes_cfg $dev 1 $2 >> $std_out
-    echo "Serde 1 Params Init Processed!"
+    echo "Serdes 1 Params Init Processed!"
     $tool_path/serdes_cfg $dev 2 $3  >> $std_out
-    echo "Serde 2 Params Init Processed!"
+    echo "Serdes 2 Params Init Processed!"
     $tool_path/serdes_cfg $dev 3 $4  >> $std_out
-    echo "Serde 3 Params Init Processed!"
+    echo "Serdes 3 Params Init Processed!"
     $tool_path/serdes_cfg $dev 4 $5 >> $std_out
-    echo "Serde 4 Params Init Processed!"
+    echo "Serdes 4 Params Init Processed!"
     $tool_path/serdes_cfg $dev 5 $6 >> $std_out
-    echo "Serde 5 Params Init Processed!"
+    echo "Serdes 5 Params Init Processed!"
     $tool_path/serdes_cfg $dev 6 $7 >> $std_out
-    echo "Serde 6 Params Init Processed!"
+    echo "Serdes 6 Params Init Processed!"
     $tool_path/serdes_cfg $dev 7 $8 >> $std_out
-    echo "Serde 7 Params Init Processed!"
+    echo "Serdes 7 Params Init Processed!"
     sleep 1s
+
+    #echo "Trigger Config!"
+    #$tool_path/reg_rw $dev 0x30020 w 0x00002222 >> $std_out 
+    #sleep 0.2
+
+    # PCIE reset release
+    $tool_path/reg_rw $dev 0x30004 w 0x00 >> $std_out 
+    sleep 0.5
     i2ctransfer 1 $1
     i2ctransfer 2 $2
     i2ctransfer 3 $3
@@ -337,3 +359,4 @@ function display () {
     i2ctransfer_test 0 $1
     i2ctransfer_test 1 $2
 }
+#ptp_timesync enp0s31f6

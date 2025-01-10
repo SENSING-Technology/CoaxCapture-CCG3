@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Set card 0 or 1
-set_card 0
+set_card 3
 
 # Sync IPC by ptp,enp0s31f6 is "network card name"
 #ptp_timesync enp0s31f6
@@ -32,7 +32,7 @@ camera_input_format_conversion[6]=0
 camera_input_format_conversion[7]=0
 camera_format_set ${camera_input_format_conversion[@]}
 
-#Camera anc config {0 disable  anc or 1 enable anc}
+#Camera anc config {0 enable anc or 1 disable anc}  
 camera_anc_enable[0]=0
 camera_anc_enable[1]=0
 camera_anc_enable[2]=0
@@ -44,14 +44,14 @@ camera_anc_enable[7]=0
 camera_anc_set ${camera_anc_enable[@]}
 
 # Video output yuv format  config {"YUYV" or "UYVY"}
-video_output_yuv_format 0 "UYVY"
-video_output_yuv_format 1 "UYVY"
-video_output_yuv_format 2 "UYVY"
-video_output_yuv_format 3 "UYVY"
-video_output_yuv_format 4 "UYVY"
-video_output_yuv_format 5 "UYVY"
-video_output_yuv_format 6 "UYVY"
-video_output_yuv_format 7 "UYVY"
+video_output_yuv_format 24 "UYVY"
+video_output_yuv_format 25 "UYVY"
+video_output_yuv_format 26 "UYVY"
+video_output_yuv_format 27 "UYVY"
+video_output_yuv_format 28 "UYVY"
+video_output_yuv_format 29 "UYVY"
+video_output_yuv_format 30 "UYVY"
+video_output_yuv_format 31 "UYVY"
 
 # Trigger mode config {0:no trigger; 1:reserved; 2:inner trigger; 3:external trigger}
 card_trigger_signal_mode       	"2"
@@ -60,7 +60,7 @@ card_trigger_signal_mode       	"2"
 # Camera external output fps config.
 # The following two configurations are valid only when card_trigger_signal_mode is "3".
 card_external_signal_input_fps 	"1" Hz
-camera_external_output_fps     	"30" Hz
+camera_external_output_fps     	"20" Hz
 
 # Camera inner output fps config
 camera_inner_output_fps        	"30" Hz
