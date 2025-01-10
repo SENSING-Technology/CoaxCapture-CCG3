@@ -32,5 +32,5 @@ typedef struct element_info{
 
 void element_channel_process(void *BaseAddress, uint32_t channel, DATA_ELEMENT * elem, int elem_num);
 void serdes_channel_init(void *BaseAddress, uint32_t channel, uint32_t index);
-
+void serdes_channel_init_raw(void *BaseAddress, uint32_t channel, uint32_t index);
 #endif 

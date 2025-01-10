@@ -2,7 +2,7 @@ CC ?= gcc
 
 all: serdes_cfg 
 
-serdes_cfg: main.o serdes_data.o element_process.o link_margin.o arm_pcie_protocol.o
+serdes_cfg: main.o serdes_data.o serdes_data_raw.o element_process.o link_margin.o arm_pcie_protocol.o
 	$(CC) -lrt -o $@ $^ -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGE_FILE_SOURCE	
 
 %.o: %.c %.h
