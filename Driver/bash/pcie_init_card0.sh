@@ -77,10 +77,10 @@ camera_triger_delay[7]=0
 trigger_delay ${camera_triger_delay[@]}
 
 # Camera 0-7 resolution: width height   
-camera_resolution 0 1920  1080
-camera_resolution 1 1920  1080
-camera_resolution 2 1920  1080
-camera_resolution 3 1920  1080
+camera_resolution 0 1920  1536
+camera_resolution 1 1920  1536
+camera_resolution 2 1920  1536
+camera_resolution 3 1920  1536
 camera_resolution 4 1920  1080
 camera_resolution 5 1920  1080
 camera_resolution 6 1920  1080
@@ -88,10 +88,10 @@ camera_resolution 7 1920  1080
 echo "Card Params Init Processed!"
 
 #camera 0-7 value: 0:GMSL camera  1:GMSL2(6G) camera  2:GMSL2F(3G) camera 
-camera_serdes_type[0]=1
-camera_serdes_type[1]=1
-camera_serdes_type[2]=1
-camera_serdes_type[3]=1
+camera_serdes_type[0]=2
+camera_serdes_type[1]=2
+camera_serdes_type[2]=2
+camera_serdes_type[3]=2
 camera_serdes_type[4]=1
 camera_serdes_type[5]=1
 camera_serdes_type[6]=1

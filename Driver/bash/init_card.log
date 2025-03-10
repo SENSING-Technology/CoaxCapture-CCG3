@@ -1,0 +1,636 @@
+2025年 03月 10日 星期一 18:00:27 CST
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+access width: word (32-bits)
+character device /dev/xdma0_user opened.
+Memory mapped at address 0x7f1373cb4000.
+Write 32-bits value 0x00000000 to 0x00030008 (0x0x7f1373ce4008)
+access width: word (32-bits)
+character device /dev/xdma0_user opened.
+Memory mapped at address 0x7f38617e8000.
+Write 32-bits value 0x00000000 to 0x00030010 (0x0x7f3861818010)
+open /dev/video0 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video1 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video2 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video3 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video4 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video5 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video6 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+open /dev/video7 Successed, fd = 3
+{ pixelformat = 'YUYV'}
+UYVY
+{ pixelformat = 'UYVY'}
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x00 0x01 0x0001
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x03 0x20 0x002c
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+
+i2ctransfer -f -y 1 w3@0x48 0x03 0x13 0x0002
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- 1a -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 0 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x00 0x01 0x0001
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x03 0x20 0x002c
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+
+i2ctransfer -f -y 2 w3@0x48 0x03 0x13 0x0002
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- 1a -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 1 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x00 0x01 0x0001
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x03 0x20 0x002c
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+
+i2ctransfer -f -y 3 w3@0x48 0x03 0x13 0x0002
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- 1a -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 2 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x00 0x01 0x0001
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x03 0x20 0x002c
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+
+i2ctransfer -f -y 4 w3@0x48 0x03 0x13 0x0002
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- 1a -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 3 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x48 0x03 0x20 0x002f
+cmd result: 
+
+i2ctransfer -f -y 5 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- 6c -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 4 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x48 0x03 0x20 0x002f
+cmd result: 
+
+i2ctransfer -f -y 6 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- 6c -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 5 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x48 0x03 0x20 0x002f
+cmd result: 
+
+i2ctransfer -f -y 7 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- 6c -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 6 Done!
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x48 0x03 0x13 0x0000
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xbe 0x0000
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x00 0x57 0x0012
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x00 0x5b 0x0011
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x03 0x18 0x005e
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xd3 0x0004
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xd5 0x0007
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xd6 0x0004
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xd8 0x0007
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x48 0x00 0x03 0x0040
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x48 0x02 0xc2 0x0083
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x48 0x02 0xc3 0x00a7
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x48 0x03 0x20 0x002f
+cmd result: 
+
+i2ctransfer -f -y 8 w3@0x40 0x02 0xbe 0x0010
+cmd result: 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- 6c -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+
+Serdes CH 7 Done!
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
+cmd result: 
+
+result: 0x0
