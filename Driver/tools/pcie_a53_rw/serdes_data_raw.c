@@ -26663,7 +26663,7 @@ ELE_INFO ele_info_raw[] = {
     {max9296_9295_IMX623_fromFlash_raw_array, sizeof(max9296_9295_IMX623_fromFlash_raw_array) / sizeof(DATA_ELEMENT)},//110
     {max9296_9295_IMX623_raw_fromI2C_array, sizeof(max9296_9295_IMX623_raw_fromI2C_array) / sizeof(DATA_ELEMENT)},//111
     {max9296_9295_IMX728_fromI2C_raw_array, sizeof(max9296_9295_IMX728_fromI2C_raw_array) / sizeof(DATA_ELEMENT)},//112
-    {max9296_9295_IMX623_raw_array, sizeof(max9296_9295_IMX623_raw_array) / sizeof(DATA_ELEMENT)}//113
+    {max9296_96717F_IMX623_raw_array, sizeof(max9296_9295_IMX623_raw_array) / sizeof(DATA_ELEMENT)}//113
 };   
 
 void serdes_channel_init_raw(void *BaseAddress, uint32_t channel, uint32_t index)
