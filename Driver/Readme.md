@@ -186,5 +186,5 @@ Common RAW or RAW12 Configurations
 | 9295           | IMX728           | 106                         |
 | 9295           | SC2331AT         | 108                         |
 | 9295           | OX08D            | 109                         |
-| 9295           | IMX623           | 113                         |
+| 96717F         | IMX623           | 113                         |
 
