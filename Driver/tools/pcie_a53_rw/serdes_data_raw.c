@@ -26625,7 +26625,7 @@ DATA_ELEMENT max9296_9295_IMX728_fromI2C_raw_array[] = {
     {0x34, 0xFFFF, 0x05, 0x10, 0},
 };
 
-DATA_ELEMENT  max9296_9295_IMX623_raw_array[] = {
+DATA_ELEMENT  max9296_96717F_IMX623_raw_array[] = {
 	{0x90, 0x0001, 0x01, 0x10, 100},            // 3g
 	{0x80, 0x02BE, 0x00, 0x10, 50},             // camera reset
 	{0x80, 0x02BE, 0x10, 0x10, 20},             // camera reset release
