@@ -6181,7 +6181,7 @@ ELE_INFO ele_info[] = {
     {max9296_9295_anc_array, sizeof(max9296_9295_anc_array) / sizeof(DATA_ELEMENT)},//3
     {max9296_96717F_anc_array, sizeof(max9296_96717F_anc_array) / sizeof(DATA_ELEMENT)},//4
     {max9296_96717_2lane_array, sizeof(max9296_96717_2lane_array) / sizeof(DATA_ELEMENT)},//5
-    {max9296_96717F_Horus640_array, sizeof(max9296_96717F_Horus640_array) / sizeof(DATA_ELEMENT)}//6  
+    {max9296_96717F_Horus640_array, sizeof(max9296_96717F_Horus640_array) / sizeof(DATA_ELEMENT)},//6  
     {max9296_9295_ISX028_ES2_YUV_array_fromI2C, sizeof(max9296_9295_ISX028_ES2_YUV_array_fromI2C) / sizeof(DATA_ELEMENT)},//7
     {max9296_9295_ISX028_ES2_YUV_array_fromflash, sizeof(max9296_9295_ISX028_ES2_YUV_array_fromflash) / sizeof(DATA_ELEMENT)},//8
 };
