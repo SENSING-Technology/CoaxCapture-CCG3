@@ -1376,7 +1376,7 @@ static irqreturn_t xdma_isr(int irq, void *dev_id)
 	struct interrupt_regs *irq_regs;
 	void *user_intc_reg;
 
-	printk("(irq=%d, dev 0x%p) <<<< ISR.\n", irq, dev_id);
+	//printk("(irq=%d, dev 0x%p) <<<< ISR.\n", irq, dev_id);
 	if (!dev_id) {
 		pr_err("Invalid dev_id on irq line %d\n", irq);
 		return -IRQ_NONE;
@@ -1396,7 +1396,7 @@ static irqreturn_t xdma_isr(int irq, void *dev_id)
 
 	/* read channel interrupt requests */
 	ch_irq = read_register(&irq_regs->channel_int_request);
-	printk("0x%p ch_irq = 0x%08x\n", &irq_regs->channel_int_request, ch_irq);
+	//printk("0x%p ch_irq = 0x%08x\n", &irq_regs->channel_int_request, ch_irq);
 
 	/*
 	 * disable all interrupts that fired; these are re-enabled individually
@@ -1407,8 +1407,8 @@ static irqreturn_t xdma_isr(int irq, void *dev_id)
 
 	/* read user interrupts - this read also flushes the above write */
 	user_irq = read_register(&irq_regs->user_int_request);
-	printk("user_irq = 0x%08x\n", user_irq);
-	printk("user_intc_reg = %08p\n", (void *)user_intc_reg);
+	//printk("user_irq = 0x%08x\n", user_irq);
+	//printk("user_intc_reg = %08p\n", (void *)user_intc_reg);
 
 	//clear user irq
 	user_irq &= 0xff;
