@@ -673,8 +673,12 @@ static int xdma_video_start_streaming(struct vb2_queue *vq, unsigned int count)
 	u32 mask;
 	unsigned long flags;
 	// u32 i;
-
-	dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+		dbg_video("video%d: vq->max_num_buffers  = %d\n", vc->num, vq->max_num_buffers );
+	#else
+		dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
+	#endif
+	
 	dbg_video("video%d: count = %d\n", vc->num, count);
 
 	intc_regs = (struct axi_intc_regs *)(xdev->bar[xdev->user_bar_idx] +
@@ -733,8 +737,12 @@ static void xdma_video_stop_streaming(struct vb2_queue *vq)
 						  REGS_USER_OFS_TRIGER + 0x7C);
 
 	// dbg_video("video%d: \n", vc->num);
-	dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
-
+	
+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+		dbg_video("video%d: vq->max_num_buffers  = %d\n", vc->num, vq->max_num_buffers );
+	#else
+		dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
+	#endif
 	mask = 0x1 << vc->ch;
 	// while((ioread32(&intc_regs->ipr) & mask) && (ioread32(&intc_regs->ier) & mask));
 	// iowrite32(mask, &intc_regs->iar);
@@ -771,10 +779,16 @@ static int xdma_video_queue_setup(struct vb2_queue *vq,
 		(vc->width * vc->height * vc->format->depth) >> 3;
 
 	dbg_video("video%d: nbuffers(%d),nplanes(%d),sizes[%d,%d,%d]\n", vc->num, *nbuffers, *nplanes, sizes[0], sizes[1], sizes[2]);
-	dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
-	if (vq->num_buffers + *nbuffers < 3)
-		*nbuffers = 3 - vq->num_buffers;
 
+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+		dbg_video("video%d: vq->max_num_buffers = %d\n", vc->num, vq->max_num_buffers);
+		if (vq->max_num_buffers + *nbuffers < 3)
+			*nbuffers = 3 - vq->max_num_buffers;
+	#else
+		dbg_video("video%d: vq->num_buffers = %d\n", vc->num, vq->num_buffers);
+		if (vq->num_buffers + *nbuffers < 3)
+			*nbuffers = 3 - vq->num_buffers;
+	#endif
 	if (*nplanes)
 	{
 		if (*nplanes != 1 || sizes[0] < szimage)
@@ -1080,9 +1094,15 @@ static int xdma_video_querycap(struct file *file, void *priv,
 	struct xdma_video_dev *dev = vc->dev;
 
 	dbg_video("video%d: \n", vc->num);
-
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+	strscpy(cap->driver, "xdma_video", sizeof(cap->driver));
+	strscpy(cap->card, dev->name, sizeof(cap->card));
+#else
 	strlcpy(cap->driver, "xdma_video", sizeof(cap->driver));
 	strlcpy(cap->card, dev->name, sizeof(cap->card));
+#endif
+
+	
 	snprintf(cap->bus_info, sizeof(cap->bus_info),
 			 "PCI:%s", pci_name(dev->pci_dev));
 	// cap->device_caps = V4L2_CAP_VIDEO_CAPTURE | V4L2_CAP_STREAMING;
@@ -1471,7 +1491,12 @@ static int xdma_video_init(struct xdma_video_dev *dev)
 		vc->vidq.ops = &xdma_video_qops;
 		vc->vidq.mem_ops = &vb2_dma_sg_memops;
 		vc->vidq.timestamp_flags = V4L2_BUF_FLAG_TIMESTAMP_MONOTONIC;
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+		vc->vidq.min_queued_buffers = 2;
+#else
 		vc->vidq.min_buffers_needed = 2;
+#endif
+		
 		vc->vidq.lock = &vc->vb_mutex;
 		vc->vidq.gfp_flags = GFP_DMA32;
 		vc->vidq.dev = &dev->pci_dev->dev;

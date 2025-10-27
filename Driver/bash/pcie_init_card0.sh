@@ -15,7 +15,7 @@ set_card 0
 echo "Reset Process!" 
 mipi_disable
 
-# Camera pps ptp mode config {0: no outside pps input & master; 1:outside pps input & master; 2:no outside pps input & salve; 3:outside pps input & salve }
+#Camera pps ptp mode config {0: no outside pps input & master; 1:outside pps input & master; 2:no outside pps input & salve; 3:outside pps input & salve }
 #camera_pps_ptpmode 0 
 
 # Camera time stamp  source {0: vsync; 1:fsync; 2:frame transfer done; }
@@ -32,7 +32,7 @@ camera_input_format_conversion[6]=0
 camera_input_format_conversion[7]=0
 camera_format_set ${camera_input_format_conversion[@]}
 
-#Camera anc config {0 disable  anc or 1 enable anc}
+#Camera anc config {0 disable  anc or 1 enable anc}  
 camera_anc_enable[0]=0
 camera_anc_enable[1]=0
 camera_anc_enable[2]=0
@@ -53,15 +53,15 @@ video_output_yuv_format 5 "UYVY"
 video_output_yuv_format 6 "UYVY"
 video_output_yuv_format 7 "UYVY"
 
-# Trigger mode config {0:no trigger; 1:reserved; 2:inner trigger; 3:external trigger}
+# Trigger mode config {2:no trigger; 1:reserved; 2:inner trigger; 3:external trigger}
 card_trigger_signal_mode       	"2"
 
 # Card external signal input fps config.
 # Camera external output fps config.
 # The following two configurations are valid only when card_trigger_signal_mode is "3".
-card_external_signal_input_fps 	"1" Hz
+card_external_signal_input_fps 	"30" Hz
 camera_external_output_fps     	"30" Hz
-
+                       
 # Camera inner output fps config
 camera_inner_output_fps        	"30" Hz
 
@@ -77,21 +77,21 @@ camera_triger_delay[7]=0
 trigger_delay ${camera_triger_delay[@]}
 
 # Camera 0-7 resolution: width height   
-camera_resolution 0 1920  1536
-camera_resolution 1 1920  1536
-camera_resolution 2 1920  1536
-camera_resolution 3 1920  1536
-camera_resolution 4 1920  1080
-camera_resolution 5 1920  1080
-camera_resolution 6 1920  1080
-camera_resolution 7 1920  1080
+camera_resolution 0 1920 1080
+camera_resolution 1 1920 1080 ###2592 1800  ###3840 2160
+camera_resolution 2 1920 1080  ###2880 1860
+camera_resolution 3 1920 1080  ###3840 2160
+camera_resolution 4 3840 2160
+camera_resolution 5 3840 2160
+camera_resolution 6 3840 2160
+camera_resolution 7 3840 2160
 echo "Card Params Init Processed!"
 
 #camera 0-7 value: 0:GMSL camera  1:GMSL2(6G) camera  2:GMSL2F(3G) camera 
-camera_serdes_type[0]=2
-camera_serdes_type[1]=2
-camera_serdes_type[2]=2
-camera_serdes_type[3]=2
+camera_serdes_type[0]=1
+camera_serdes_type[1]=1
+camera_serdes_type[2]=1
+camera_serdes_type[3]=1
 camera_serdes_type[4]=1
 camera_serdes_type[5]=1
 camera_serdes_type[6]=1
