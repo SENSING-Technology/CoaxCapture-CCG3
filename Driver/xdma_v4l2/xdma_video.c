@@ -780,7 +780,7 @@ static int xdma_video_queue_setup(struct vb2_queue *vq,
 
 	dbg_video("video%d: nbuffers(%d),nplanes(%d),sizes[%d,%d,%d]\n", vc->num, *nbuffers, *nplanes, sizes[0], sizes[1], sizes[2]);
 
-	#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 16, 0)
 		dbg_video("video%d: vq->max_num_buffers = %d\n", vc->num, vq->max_num_buffers);
 		if (vq->max_num_buffers + *nbuffers < 3)
 			*nbuffers = 3 - vq->max_num_buffers;
@@ -1491,7 +1491,7 @@ static int xdma_video_init(struct xdma_video_dev *dev)
 		vc->vidq.ops = &xdma_video_qops;
 		vc->vidq.mem_ops = &vb2_dma_sg_memops;
 		vc->vidq.timestamp_flags = V4L2_BUF_FLAG_TIMESTAMP_MONOTONIC;
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 16, 0)
 		vc->vidq.min_queued_buffers = 2;
 #else
 		vc->vidq.min_buffers_needed = 2;

@@ -31,3 +31,5 @@ Follow the instructions in the respective `README.md` files under the `Driver/` 
 
 - Ubuntu 18.04
 - Ubuntu 20.04
+- Ubuntu 22.04
+- Ubuntu 24.04
