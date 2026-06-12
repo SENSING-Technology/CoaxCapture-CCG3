@@ -87,7 +87,7 @@ camera_resolution 6 3840 2160
 camera_resolution 7 3840 2160
 echo "Card Params Init Processed!"
 
-#camera 0-7 value: 0:GMSL camera  1:GMSL2(6G) camera  2:GMSL2F(3G) camera 
+#camera 0-9 value: 0:GMSL camera  1:GMSL2(6G) camera  2:GMSL2F(3G) camera    8:ISX028-ES2  9:ISX028-ES3
 camera_serdes_type[0]=1
 camera_serdes_type[1]=1
 camera_serdes_type[2]=1
